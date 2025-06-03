@@ -1,0 +1,56 @@
+def showmenu():
+    print("\n--to do list menu")
+    print("1.show task one ")
+    print("2.add task ")
+    print("3.remove task ")
+    print("4.exit")
+
+def show(tasks):
+        if not tasks :
+            print("no tasks")
+
+        else:
+            for idx ,task in enumerate(tasks,1):
+             print(f"{idx}.{task}")
+
+
+def main():
+   tasks =[]
+
+   while True:
+      showmenu()
+      choice =input("enter your choice : ")
+
+      if choice=='1':
+         show(tasks)
+        
+      elif choice=='2':
+         task=input("enter your new task ")
+         tasks.append(task)
+         print("task added.")
+      
+      elif choice =='3':
+         show(tasks)
+         try :
+            index=int(input("enter task number to remove:"))-1
+            remove=tasks.pop(index)
+            print(f"removed: {remove}")
+         except:
+            print("invalid number. ")
+      elif choice=='4':
+         print("exiting to do list . bye")
+         break
+      else:
+         print("invalid choice ... try again ")
+
+
+if __name__=="__main__":
+   main()
+
+
+# aut("enter the number")
+# print(a=inp)
+
+
+
+   
