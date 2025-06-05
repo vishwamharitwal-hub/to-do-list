@@ -48,8 +48,6 @@ if __name__=="__main__":
    main()
 
 
-# aut("enter the number")
-# print(a=inp)
 
 
 
